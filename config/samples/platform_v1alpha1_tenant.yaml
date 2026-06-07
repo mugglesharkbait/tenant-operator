@@ -1,0 +1,17 @@
+apiVersion: platform.example.io/v1alpha1
+kind: Tenant
+metadata:
+  # labels:
+  #   app.kubernetes.io/name: tenant-operator
+  #   app.kubernetes.io/managed-by: kustomize
+  name: team-falcon
+spec:
+  displayName: "Team Falcon"
+  owners:
+    - "user:alice@example.io"
+    - "group:team-falcon"
+  resourceQuota:
+    cpu: "8"
+    memory: "16Gi"
+    pods: 40
+  networkIsolation: true
